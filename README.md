@@ -9,31 +9,30 @@ Création d'un Dashboard Interactif avec Streamlit
 ## Étape 1 : Comprendre et S’approprier le Contexte
 Objectif : Étudier la structure des données pour en extraire un maximum d'informations exploitables.
 
-Structure des tables :
-Table Annonce : Contient des champs clés comme le prix, la surface, la date de publication, etc.
-Table Ville : Relie chaque annonce à une ville donnée.
-Table Équipement : Liste les équipements disponibles (ascenseur, balcon, etc.).
-Table AnnonceEquipement : Gère la relation plusieurs-à-plusieurs entre les annonces et les équipements.
-Relations entre les tables :
-
-Annonce ↔ Ville : Une annonce est liée à une seule ville (relation plusieurs-à-un).
-Annonce ↔ Équipement : Une annonce peut avoir plusieurs équipements, et un équipement peut être associé à plusieurs annonces (relation plusieurs-à-plusieurs).
-💡 À faire :
-Étudiez le schéma relationnel pour bien comprendre comment les données sont interconnectées.
-Identifiez les informations à extraire, comme le nombre d'annonces par ville, les équipements les plus fréquents, ou encore l'évolution des prix.
+  ** Structure des tables :
+      Table Annonce : Contient des champs clés comme le prix, la surface, la date de publication, etc.
+      Table Ville : Relie chaque annonce à une ville donnée.
+      Table Équipement : Liste les équipements disponibles (ascenseur, balcon, etc.).
+      Table AnnonceEquipement : Gère la relation plusieurs-à-plusieurs entre les annonces et les équipements.
+  ** Relations entre les tables :
+      Annonce ↔ Ville : Une annonce est liée à une seule ville (relation plusieurs-à-un).
+      Annonce ↔ Équipement : Une annonce peut avoir plusieurs équipements, et un équipement peut être associé à plusieurs annonces (relation plusieurs-à-plusieurs).
+  * 💡 À faire :
+      Étudiez le schéma relationnel pour bien comprendre comment les données sont interconnectées.
+      Identifiez les informations à extraire, comme le nombre d'annonces par ville, les équipements les plus fréquents, ou encore l'évolution des prix.
 
 ## Étape 2 : Préparer l’Environnement
 Objectif : Mettre en place un environnement de travail stable et fonctionnel.
 
-Outils nécessaires :
-Python : Langage principal pour le projet.
-Bibliothèques : streamlit, pandas, sqlalchemy, psycopg2 (pour interagir avec PostgreSQL).
-Base de données PostgreSQL :
-Assurez-vous qu’elle est configurée et accessible.
-Si besoin, hébergez-la via Docker pour simplifier le déploiement.
-💡 À faire :
-Installez les bibliothèques nécessaires via pip install.
-Testez la connexion à PostgreSQL pour vérifier l’accès aux données.
+  ** Outils nécessaires :
+      Python : Langage principal pour le projet.
+      Bibliothèques : streamlit, pandas, sqlalchemy, psycopg2 (pour interagir avec PostgreSQL).
+  ** Base de données PostgreSQL :
+      Assurez-vous qu’elle est configurée et accessible.
+      Si besoin, hébergez-la via Docker pour simplifier le déploiement.
+  * 💡 À faire :
+      Installez les bibliothèques nécessaires via pip install.
+      Testez la connexion à PostgreSQL pour vérifier l’accès aux données.
 
 ## Étape 3 : Concevoir le Dashboard
 Objectif : Définir l’interface et les fonctionnalités du tableau de bord.
