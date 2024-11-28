@@ -1,0 +1,14 @@
+#! /bin/bash
+file_content1=$(docker ps -a |grep -v 'CONTA'| awk -F ' ' '{print $1}')
+file_content2=$(docker images | grep -v 'REPOSITORY' | awk -F ' ' '{print $1,$2}' | awk -F ' ' '{print $1 = $1 ":",$2}' OFS='')
+file_content3=$(docker volume ls | grep -v 'DRIVER    VOLUME NAME' | awk -F ' ' '{print $2}')
+for x in $file_content1; do
+	docker stop $x
+	docker rm $x
+done
+for i in $file_content2; do
+    docker rmi $i
+done
+for n in $file_content3; do
+	sudo docker volume rm -f $n
+done
